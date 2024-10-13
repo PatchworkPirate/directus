@@ -4,7 +4,7 @@
 	"homepage": "https://directus.io",
 	"type": "module",
 	"scripts": {
-		"build": "pnpm --recursive --filter '!docs' run build",
+		"build": "corepack enable && pnpm --recursive --filter '!docs' run build --output public",
 		"format": "prettier --cache --check .",
 		"lint": "eslint --cache .",
 		"test": "pnpm --recursive --filter '!tests-blackbox' test",
